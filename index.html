@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>finansim</title>
+</head>
+
+<body style="margin: 50px;">
+  <div id="control_panel">
+    <span> Duration </span>
+    <span><input type="number" id="duration" min="1" value="1"></span>
+    <span><input type="button" onclick="buildDashboard()" value="Run"></span>
+  </div>
+  <hr/>
+  <div id="dashboard"></div>
+  <hr/>
+  <div id="workspace"></div>
+  <hr/>
+  <div>
+    <p>Create your own entity...</p>
+    <table border="1">
+      <tbody>
+        <tr><td colspan="2">Name</td><td colspan="2"><input name="create-name"></td></tr>
+        <tr><td colspan="2">Description</td><td colspan="2"><input name="create-description"></td></tr>
+        <tr><td colspan="2">Rate</td><td colspan="2"><input name="create-change-rate"></td></tr>
+        <tr><td colspan="2">Type</td><td colspan="2">
+              <select name="create-change-type">
+                <option value="APPRECIATING" selected>APPRECIATING</option>
+                <option value="DEPRECIATING">DEPRECIATING</option>
+                <option value="FIXED">FIXED</option>
+              </select>
+        </td></tr>
+        <tr></tr>
+      </tbody>
+    </table>
+    <input type="button" onclick="createNewEntity()" value="Create">
+  </div>
+  <script src="entity.js"></script>
+  <script src="predef.js"></script>
+  <script src="finan.js"></script>
+</body>
+</html>

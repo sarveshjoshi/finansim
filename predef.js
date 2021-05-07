@@ -1,0 +1,12 @@
+var predef_entities = [];
+predef_entities.push(new Entity("Petty Cash", "Uninvested Cash in hand", "FIXED", 0,  0));
+predef_entities.push(new Entity("Bank deposit", "Bank deposit with 5% appreciation", "APPRECIATING", 5,  0));
+predef_entities.push(new Entity("Pension Fund", "Pension Fund with 10% appreciation", "APPRECIATING", 10,  0));
+predef_entities.push(new Entity("High risk stock", "Stock with 20% depreciation (assumed)", "DEPRECIATING", 20,  0));
+predef_entities.push(new Entity("Medium risk stock", "Stock with 10% appreciation (assumed)", "APPRECIATING", 10,  0));
+predef_entities.push(new Entity("Low risk stock", "Stock with 5% appreciation (assumed)", "APPRECIATING", 5,  0));
+predef_entities.push(new Entity("Long Term Mutual Funds", "Mutual Funds invested for longer duration with 20% appreciation (assumed)", "APPRECIATING", 20,  0));
+predef_entities.push(new Entity("Short Term Mutual Funds", "Mutual Funds invested for shorter duration with 5% appreciation (assumed)", "APPRECIATING", 5,  0));
+predef_entities.push(new Entity("Commodity - GOLD", "Gold as commodity with 5% appreciation (assumed)", "APPRECIATING", 5,  0));
+predef_entities.push(new Entity("Commodity - CRUDEOIL", "Crude-oil as commodity with 5% appreciation (assumed)", "APPRECIATING", 5,  0));
+predef_entities.push(new Entity("Car", "Car with 10% depreciation", "DEPRECIATING", 10,  0));
