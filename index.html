@@ -1,41 +1,90 @@
-<!doctype html>
+  <!doctype html>
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>finansim</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 
-  <title>finansim</title>
-</head>
+  </head>
 
-<body style="margin: 50px;">
-  <div id="control_panel">
-    <span> Duration </span>
-    <span><input type="number" id="duration" min="1" value="1"></span>
-    <span><input type="button" onclick="buildDashboard()" value="Run"></span>
-  </div>
-  <hr/>
-  <div id="dashboard"></div>
-  <hr/>
-  <div id="workspace"></div>
-  <hr/>
-  <div>
-    <p>Create your own entity...</p>
-    <table border="1">
-      <tbody>
-        <tr><td colspan="2">Name</td><td colspan="2"><input name="create-name"></td></tr>
-        <tr><td colspan="2">Description</td><td colspan="2"><input name="create-description"></td></tr>
-        <tr><td colspan="2">Rate</td><td colspan="2"><input name="create-change-rate"></td></tr>
-        <tr><td colspan="2">Type</td><td colspan="2">
-              <select name="create-change-type">
-                <option value="APPRECIATING" selected>APPRECIATING</option>
-                <option value="DEPRECIATING">DEPRECIATING</option>
-                <option value="FIXED">FIXED</option>
-              </select>
-        </td></tr>
-        <tr></tr>
-      </tbody>
-    </table>
-    <input type="button" onclick="createNewEntity()" value="Create">
+  <body style="margin: 50px;">
+    <div id="control_panel" class="is-inline-block">
+      <span class="label is-inline"> Duration </span>
+      <input class="input is-inline" type="number" id="duration" min="1" value="1"></span>
+      <button class="button is-primary is-inline" onclick="buildDashboard()">Run</button>
+    </div>
+    <hr/>
+    <div id="dashboard"></div>
+    <hr/>
+    <div id="workspace"></div>
+    <hr/>
+    <div class="is-inline-block">
+      <fieldset>
+        <div class="field is-horizontal is-grouped-centered">
+          <div class="field-label is-normal">
+            <label class="label">Create your own Entity</label>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Name</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input" type="text" name="create-name">
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Description</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input" type="text" name="create-description">
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Rate</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input" type="text" name="create-change-rate">
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Type</label>
+          </div>
+          <div class="field-body">
+            <div class="field is-narrow">
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select name="create-change-type">
+                    <option>APPRECIATING</option>
+                    <option>DEPRECIATING</option>
+                    <option>FIXED</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">    
+          <button class="button is-primary" onclick="createNewEntity()">Create</button>
+        </div>
+      </fieldset>
+    </div>
   </div>
   <script src="entity.js"></script>
   <script src="predef.js"></script>

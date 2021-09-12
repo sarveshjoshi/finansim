@@ -9,8 +9,7 @@ class Entity {
     this.id = Math.floor(Math.random() * 100);
     this.name = name;
     this.description = description;
-    this.changeTypeDescription = changeType;
-    this.changeType = ChangeType[changeType];
+    this.changeType = changeType;
     this.changeRate = changeRate;
     this.initialValue = initialValue;
   }
@@ -25,12 +24,18 @@ class ActiveEntity extends Entity {
 
   tick() {
     this.duration++;
-    this.currentValue = compound(this.initialValue, this.changeRate * this.changeType, duration);
+    this.currentValue = compound(this.initialValue, this.changeRate * ChangeType[this.changeType], duration);
   }
 
   computeFor(duration) {
     this.duration = duration;
-    this.currentValue = compound(this.initialValue, this.changeRate * this.changeType, duration);
+    this.currentValue = compound(this.initialValue, this.changeRate * ChangeType[this.changeType], duration);
+  }
+}
+
+class TransactionCondition {
+  constructor(duration) {
+
   }
 }
 
